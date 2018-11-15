@@ -153,7 +153,7 @@ Please use `tqdm_gui(...)` instead of `tqdm(..., gui=True)`
                 tqdm.write(offset + '|    TRAINING    | ____') 
                 tqdm.write(offset + '|     epoch      | |DD|____T_ ')
                 tqdm.write(offset + f'|   {obj:>6}       | |_ |_____|<')  
-                tqdm.write(offset + '| ＿＿＿_＿＿＿＿|x  @-@-@-oo\') 
+                tqdm.write(offset + '| ＿＿＿_＿＿＿＿|x  @-@-@-oo\\') 
 
             # Closing the progress bar.
             # Update some internal variables for close().
