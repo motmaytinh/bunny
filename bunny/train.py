@@ -47,7 +47,7 @@ class TqdmDefaultWriteLock(object):
         self.release()
 
 
-class bunny(tqdm):
+class train(tqdm):
     monitor_interval = 10  # set to 0 to disable the thread
     monitor = None
     _lock = TqdmDefaultWriteLock()
@@ -85,7 +85,7 @@ class bunny(tqdm):
 Please use `tqdm_gui(...)` instead of `tqdm(..., gui=True)`
 """, fp_write=getattr(self.fp, 'write', sys.stderr.write))
 
-            tqdm.write("\r" + " " * self.ncols + "\n" * 8)  # make space for bunny
+            tqdm.write("\r" + " " * self.ncols + "\n" * 8)  # make space for train
 
             for obj in iterable:
                 yield obj
@@ -150,13 +150,10 @@ Please use `tqdm_gui(...)` instead of `tqdm(..., gui=True)`
                 else:
                     offset = ""
                 tqdm.write(offset + '|￣￣￣￣￣￣￣￣|')
-                tqdm.write(offset + '|    TRAINING    |') 
-                tqdm.write(offset + '|     epoch      |')
-                tqdm.write(offset + f'|   {obj:>6}       |')  
-                tqdm.write(offset + '| ＿＿＿_＿＿＿＿|') 
-                tqdm.write(offset + ' (\__/) ||') 
-                tqdm.write(offset + ' (•ㅅ•) || ')
-                tqdm.write(offset + ' / 　 づ')
+                tqdm.write(offset + '|    TRAINING    | ____') 
+                tqdm.write(offset + '|     epoch      | |DD|____T_ ')
+                tqdm.write(offset + f'|   {obj:>6}       | |_ |_____|<')  
+                tqdm.write(offset + '| ＿＿＿_＿＿＿＿|x  @-@-@-oo\') 
 
             # Closing the progress bar.
             # Update some internal variables for close().
