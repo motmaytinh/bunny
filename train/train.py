@@ -86,7 +86,7 @@ Please use `tqdm_gui(...)` instead of `tqdm(..., gui=True)`
 """, fp_write=getattr(self.fp, 'write', sys.stderr.write))
 
             blank = " " * self.ncols
-            newline = "\n" * 8
+            newline = "\n" * 4
             tqdm.write("\r" + blank + newline)  # make space for train
 
             for obj in iterable:
@@ -154,8 +154,8 @@ Please use `tqdm_gui(...)` instead of `tqdm(..., gui=True)`
                 tqdm.write(offset + '|￣￣￣￣￣￣￣￣|')
                 tqdm.write(offset + '|    TRAINING    | ____') 
                 tqdm.write(offset + '|     epoch      | |DD|____T_ ')
-                tqdm.write(offset + f'|   {obj:>6}       | |_ |_____|<')  
-                tqdm.write(offset + '| ＿＿＿_＿＿＿＿|x  @-@-@-oo\\') 
+                tqdm.write(offset + f'|___{obj:>6}    ___| |_ |_____|<')  
+                tqdm.write(offset + '@-@-@ @-@-@ @-@-@  @-@-@-oo\\') 
 
             # Closing the progress bar.
             # Update some internal variables for close().
