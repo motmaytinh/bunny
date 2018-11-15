@@ -21,5 +21,5 @@ for epoch in train(epochs):  # use bunny like tqdm
 # Installation
 
 ```
-pip install git+git://github.com/bheinzerling/bunny
+pip install git+git://github.com/motmaytinh/train
 ```
