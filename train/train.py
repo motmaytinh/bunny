@@ -85,7 +85,9 @@ class train(tqdm):
 Please use `tqdm_gui(...)` instead of `tqdm(..., gui=True)`
 """, fp_write=getattr(self.fp, 'write', sys.stderr.write))
 
-            tqdm.write("\r" + (" " * self.ncols) + ("\n" * 8))  # make space for train
+            blank = " " * self.ncols
+            newline = "\n" * 8
+            tqdm.write("\r" + blank + newline)  # make space for train
 
             for obj in iterable:
                 yield obj
